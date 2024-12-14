@@ -24,14 +24,21 @@ body {
     font-family: var(--alt-font-family);
 }
 
-@media (max-width:768px) {
-    .aaa { text-align: center;
+@media (max-width: 768px) {
+    .image__container {
+        text-align: center;
     }
     .centered__main-page__element {
         display: block;
-        width: 500px;
+        max-width: 500px;
         margin: 0 auto;
     }
+}
+
+.centered__main-page__element {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
 }
 .task {
     width: 100%;
