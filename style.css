@@ -73,12 +73,12 @@ button:hover {
     color: var(--primary-color);
 }
 /* Heading */
-h3, label[for='new-task'] {
+h3, label[for='new__task'] {
     color: var(--primary-color);
     font-weight: 700;
     font-size: 15px;
     border-bottom: 2px solid var(--primary-color);
-    padding: 30px 0 10px;
+    padding: 2rem 0 1rem;
     margin-left: 0;
     text-transform: uppercase;
 }
@@ -94,16 +94,17 @@ input[type="text"] {
     font-family: var(--font-family);
     color: var(--secondary-color);
 }
+
 input[type="text"]:focus {
     color: var(--primary-color);
 }
 
 /* New Task */
-label[for='new-task'] {
+label[for='new__task'] {
     display: block;
     margin: 0 0 20px;
 }
-input#new-task {
+input#new__task{
     width: 318px;
 }
 
@@ -125,10 +126,14 @@ li > input[type="checkbox"] {
     margin-right: 10px;
 }
 li > label {
+    flex-grow: 1;
     padding-left: 10px;
-    box-sizing: border-box;
     font-size: 18px;
     width: 100%;
+}
+
+button.delete {
+    width: 50px;
 }
 
 button.delete img {

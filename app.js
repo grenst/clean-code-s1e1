@@ -53,18 +53,15 @@ const createNewTaskElement = (taskString) => {
     return listItem;
 }
 
-const addTask = function(){
+const addTask = () => {
     console.log("Add Task...");
     //Create a new list item with the text from the #new-task:
-    if (!taskInput.value) return;
-    const listItem = createNewTaskElement(taskInput.value);
+    if (!taskInput.value.trim()) return;
+    const listItem = createNewTaskElement(taskInput.value.trim());
 
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
-
-    taskInput.value = "";
-
 }
 
 //Edit an existing task.
@@ -112,9 +109,7 @@ const taskCompleted = function(){
     console.log("Complete Task...");
 
     //Append the task list item to the #completed-tasks
-    const listItem = this.parentNode;
-    completedTasksHolder.appendChild(listItem);
-    bindTaskEvents(listItem, taskIncomplete);
+    moveTask(this.parentNode, completedTasksHolder, taskIncomplete);
 
 }
 
@@ -123,9 +118,7 @@ const taskIncomplete = function() {
 //Mark task as incomplete.
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
-    const listItem = this.parentNode;
-    incompleteTaskHolder.appendChild(listItem);
-    bindTaskEvents(listItem,taskCompleted);
+    moveTask(this.parentNode, incompleteTaskHolder, taskCompleted);
 }
 
 
@@ -135,12 +128,17 @@ const ajaxRequest = function() {
 }
 
 //The glue to hold it all together.
+const moveTask = (listItem, destination, eventHandler) => {
+    destination.appendChild(listItem);
+    bindTaskEvents(listItem, eventHandler);
+};
 
 
 //Set the click handler to the addTask function.
-addButton.onclick = addTask;
-addButton.addEventListener("click",addTask);
-addButton.addEventListener("click",ajaxRequest);
+addButton.addEventListener("click", () => {
+    addTask();
+    ajaxRequest();
+});
 
 
 const bindTaskEvents = function(taskListItem,checkBoxEventHandler){
