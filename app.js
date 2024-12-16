@@ -1,50 +1,31 @@
-//Document is the DOM can be accessed in the console with document.window.
-// Tree is from the top, html, body, p etc.
+const taskInput = document.getElementById("new__task");
+const addButton = document.querySelector("button");
+const incompleteTaskHolder = document.getElementById("incomplete__tasks");
+const completedTasksHolder = document.getElementById("completed__tasks");
 
-//Problem: User interaction does not provide the correct results.
-//Solution: Add interactivity so the user can manage daily tasks.
-//Break things down into smaller steps and take each step at a time.
-
-
-// Event handling, user interaction is what starts the code execution.
-
-const taskInput = document.getElementById("new__task");//Add a new task.
-const addButton = document.querySelector("button");//first button
-const incompleteTaskHolder = document.getElementById("incomplete__tasks");//ul of #incompleteTasks
-const completedTasksHolder = document.getElementById("completed__tasks");//completed-tasks
-
-
-//New task list item
 const createNewTaskElement = (taskString) => {
-
     const listItem = document.createElement("li");
 
-    //input (checkbox)
-    const checkBox = document.createElement("input");//checkbx
-    //label
-    const label = document.createElement("label");//label
-    //input (text)
-    const editInput = document.createElement("input");//text
-    //button.edit
-    const editButton = document.createElement("button");//edit button
+    const checkBox = document.createElement("input");
+    const label = document.createElement("label");
+    const editInput = document.createElement("input");
+    const editButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
+    const deleteButtonImg = document.createElement("img");
 
-    //button.delete
-    const deleteButton = document.createElement("button");//delete button
-    const deleteButtonImg = document.createElement("img");//delete button image
-
-    label.innerText = taskString;
-    label.className = 'task';
-
-    //Each elements, needs appending
     checkBox.type = "checkbox";
+    checkBox.className = "checkbox";
     editInput.type = "text";
-    editInput.className = "task";
-
-    editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
+    editInput.className = "task-input";
+    label.innerText = taskString;
+    label.className = "task";
+    editButton.innerText = "Edit";
     editButton.className = "edit";
-
     deleteButton.className = "delete";
-    deleteButtonImg.src = './remove.svg';
+    deleteButtonImg.src = "./remove.svg";
+    deleteButtonImg.alt = "Delete";
+    deleteButtonImg.className = "pic";
+
     deleteButton.appendChild(deleteButtonImg);
 
 

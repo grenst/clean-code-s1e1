@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
     text-align: right;
 }
-.image__container img {
+.image__container .head__pic {
     width: 100%;
 }
 .image__container .more__info{
@@ -73,7 +73,7 @@ button:hover {
     color: var(--primary-color);
 }
 /* Heading */
-h3, label[for='new__task'] {
+h3 {
     color: var(--primary-color);
     font-weight: 700;
     font-size: 15px;
@@ -82,8 +82,8 @@ h3, label[for='new__task'] {
     margin-left: 0;
     text-transform: uppercase;
 }
-input[type="text"] {
-    margin: 0;
+.task-input {
+    margin-left: 0;
     font-size: 18px;
     line-height: 18px;
     height: 21px;
@@ -95,17 +95,18 @@ input[type="text"] {
     color: var(--secondary-color);
 }
 
-input[type="text"]:focus {
+.todo__list .task-input {
+    display: none;
+}
+
+.task-input:focus {
     color: var(--primary-color);
 }
 
 /* New Task */
-label[for='new__task'] {
-    display: block;
-    margin: 0 0 20px;
-}
-input#new__task{
-    width: 318px;
+
+#add__to__list .task-input {
+    width: 100%;
 }
 
 /* Task list */
@@ -122,7 +123,7 @@ li > * {
     vertical-align: middle;
     margin: 0;
 }
-li > input[type="checkbox"] {
+.checkbox {
     margin-right: 10px;
 }
 li > label {
@@ -146,21 +147,34 @@ button.delete img:hover {
 }
 
 /* Completed */
-#completed__tasks > li > label {
+#completed__tasks .task {
     text-decoration: line-through;
     color: var(--secondary-color);
 }
 
-/* Edit Task */
-ul li input[type=text] {
-    display: none;
+li > button {
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 60px;
+    text-align: center;
 }
 
-ul li.editMode input[type=text] {
+.delete .pic {
+    height: 2em;
+    transform: rotateZ(45deg);
+    transition: transform 200ms ease-in-out;
+}
+
+.delete .pic:hover {
+    transform: rotateZ(0);
+}
+
+/* Edit Task */
+.editMode .task-input {
     display: inline-block;
     width: 100%;
 }
 
-ul li.editMode label {
+.editMode .task {
     display: none;
 }
