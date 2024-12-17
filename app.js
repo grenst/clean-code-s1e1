@@ -37,8 +37,9 @@ const createNewTaskElement = (taskString) => {
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
+    checkBox.className = "checkbox";
     editInput.type = "text";
-    editInput.className = "task";
+    editInput.className = "task-input";
 
     editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
     editButton.className = "edit";
