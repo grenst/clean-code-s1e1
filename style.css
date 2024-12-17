@@ -12,7 +12,7 @@ body {
     color: var(--primary-color);
     font-family: var(--font-family);
 }
-.image__container {
+.header__container {
     width: 500px;
     margin: 0 auto;
     text-align: right;
@@ -25,16 +25,16 @@ body {
 }
 
 @media (max-width: 768px) {
-    .image__container {
+    .header__container {
         text-align: center;
     }
-    .centered__main-page__element {
+    .main__page {
         width: auto;
         padding: 0 10px;
     }
 }
 
-.centered__main-page__element {
+.main__page {
     display: block;
     max-width: 500px;
     margin: 0 auto;
