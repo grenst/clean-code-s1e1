@@ -19,11 +19,11 @@ body {
     text-align: right;
   }
 
-  .header__container img {
+  .head__pic {
     width: 100%;
   }
 
-  .header__container .more__inf {
+  .more__inf {
     font-family: var(--alt-font-family);
   }
   
@@ -107,15 +107,11 @@ body {
   .task__input:focus {
     color: var(--primary-color);
   }
-
-  /* #add-to-list .task-input {
-    width: 100%;
-  } */
   
   /* New Task */
-  #add-to-list .task-input {
+  #add-to-list .task__input {
     display: block;
-    margin: 0 0 20px;
+    margin: 20px 0;
   }
 
   #new-task {
@@ -161,17 +157,17 @@ body {
     text-decoration: line-through;
     color: var(--secondary-color);
   }
-  
+
   /* Edit Task */
-  .todo__list .task__input {
+  .task__input {
     display: none;
   }
-  
+
   .edit__mode .task__input {
     display: inline-block;
     width: 100%;
   }
-  
+
   .edit__mode .task {
     display: none;
   }
