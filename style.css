@@ -22,7 +22,7 @@ body {
         text-align: center;
     }
   }
-  .centered-main-page-element {
+  .main__page {
     display: block;
     width: 500px;
     margin: 0 auto 0;
@@ -39,7 +39,7 @@ body {
     margin:0;
     padding: 0px;
   }
-  li, h3 {
+  li, h2 {
     list-style:none;
   }
   input,button{
@@ -58,8 +58,7 @@ body {
     color: #3a3A3a;
   }
   /* Heading */
-  h3,
-  label[for='new-task'] {
+  h2 {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -68,7 +67,7 @@ body {
     margin: 0;
     text-transform: uppercase;
   }
-  input[type="text"] {
+  .task__input {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -80,9 +79,13 @@ body {
     font-family: Lato, sans-serif;
     color: #888;
   }
-  input[type="text"]:focus {
+  .task__input:focus {
     color: #333;
   }
+
+  #add-to-list .task-input {
+    width: 100%;
+}
   
   /* New Task */
   label[for='new-task'] {
