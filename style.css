@@ -4,22 +4,23 @@ body {
     color: #333;
     font-family: Lato, sans-serif;
   }
-  .aaa {
+  .header__container {
     width: 500px;
     margin: 0 auto;
     display: block;
     text-align: right;
   }
-  .aaa img {
+  .header__container img {
     width: 100%;
   }
-  .aaa .more_inf {
+  .header__container .more__inf {
     font-family: fantasy, cursive;
   }
   
   @media (max-width:768px) {
-  .aaa { text-align: center;
-  }
+    .header__container { 
+        text-align: center;
+    }
   }
   .centered-main-page-element {
     display: block;
@@ -31,7 +32,7 @@ body {
     display: inline-block;
     flex-grow: 1
   }
-  .task-row-wrapper {
+  .task-row__wrapper {
     display: flex;
   }
   ul {
@@ -138,11 +139,11 @@ body {
     display:none
   }
   
-  ul li.editMode input[type=text] {
+  ul li.edit__mode input[type=text] {
     display:inline-block;
     width:224px
   }
   
-  ul li.editMode label {
+  ul li.edit__mode label {
     display:none;
   }
