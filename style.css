@@ -119,7 +119,7 @@ body {
   }
 
   input#new-task {
-    width: 318px;
+    width: 100%;
   }
   
   /* Task list */
@@ -147,10 +147,6 @@ body {
     width: 100%;
   }
 
-  /* li > input[type="text"] {
-    width: 226px;
-  } */
-
   button.delete img {
     height: 2em;
     transform: rotateZ(45deg);
@@ -167,11 +163,11 @@ body {
   }
   
   /* Edit Task */
-  .todo__list .task-input {
+  .todo__list .task__input {
     display: none;
   }
   
-  .edit__mode .task-input {
+  .edit__mode .task__input {
     display: inline-block;
     width: 100%;
   }
