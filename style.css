@@ -24,7 +24,7 @@ body {
   }
 
   .header__container .more__inf {
-    font-family: fantasy, cursive;
+    font-family: var(--alt-font-family);
   }
   
   @media (max-width:768px) {
@@ -68,24 +68,24 @@ body {
 
   button {
     background: none;
-    border: 0px;
-    color: #888;
+    border: 0;
+    color: var(--secondary-color);
     font-size: 15px;
-    width: 60px;
-    font-family: Lato, sans-serif;
+    min-width: 60px;
+    font-family: var(--font-family);
     cursor: pointer;
   }
 
   button:hover {
-    color: #3a3A3a;
+    color: var(--primary-color);
   }
 
   /* Heading */
   h2 {
-    color: #333;
+    color: var(--primary-color);
     font-weight: 700;
     font-size: 15px;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--primary-color);
     padding: 30px 0 10px;
     margin: 0;
     text-transform: uppercase;
@@ -100,12 +100,12 @@ body {
     border: 1px solid #dDd;
     background: #FFF;
     border-radius: 6px;
-    font-family: Lato, sans-serif;
-    color: #888;
+    font-family: var(--font-family);
+    color: var(--secondary-color);
   }
 
   .task__input:focus {
-    color: #333;
+    color: var(--primary-color);
   }
 
   #add-to-list .task-input {
@@ -130,10 +130,12 @@ body {
     justify-content: space-between;
     align-items: center;
   }
+
   li > * {
     vertical-align: middle;
     margin: 0;
   }
+
   .checkbox {
     margin-right: 10px;
   }
@@ -161,7 +163,7 @@ body {
   /* Completed */
   #completed-tasks .task {
     text-decoration: line-through;
-    color: #888;
+    color: var(--secondary-color);
   }
   
   /* Edit Task */
